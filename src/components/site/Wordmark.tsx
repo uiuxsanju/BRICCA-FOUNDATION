@@ -1,9 +1,15 @@
+import logoFull from "@/assets/logo-full.png";
+import logoIcon from "@/assets/logo-icon.png";
 import { cn } from "@/lib/utils";
 
 /**
- * Typographic wordmark used until the official BRICCA FOUNDATION logo file is
- * supplied. Replace the contents of this component with the official asset —
- * every usage across the site picks it up automatically.
+ * Official BRICCA FOUNDATION logo.
+ *
+ * On light backgrounds (tone="dark") we render the full-colour lockup as
+ * supplied. On dark backgrounds (tone="light" — the transparent navbar over
+ * the hero image, and the footer) the logo's black wordmark text would be
+ * unreadable, so we pair the badge icon with a light-coloured text treatment
+ * instead.
  */
 export function Wordmark({
   className,
@@ -12,34 +18,22 @@ export function Wordmark({
   className?: string;
   tone?: "dark" | "light";
 }) {
+  if (tone === "dark") {
+    return (
+      <span className={cn("flex items-center", className)}>
+        <img src={logoFull} alt="BRICCA Foundation" className="h-11 w-auto" />
+      </span>
+    );
+  }
+
   return (
     <span className={cn("flex items-center gap-3", className)}>
-      <span
-        aria-hidden="true"
-        className={cn(
-          "grid size-9 place-items-center border font-display text-sm font-extrabold tracking-tight",
-          tone === "light"
-            ? "border-on-dark/30 text-on-dark"
-            : "border-primary/25 text-primary",
-        )}
-      >
-        BF
-      </span>
+      <img src={logoIcon} alt="" aria-hidden="true" className="size-10 shrink-0" />
       <span className="leading-tight">
-        <span
-          className={cn(
-            "block font-display text-[0.95rem] font-extrabold tracking-[0.14em]",
-            tone === "light" ? "text-on-dark" : "text-primary",
-          )}
-        >
+        <span className="block font-display text-[0.95rem] font-extrabold tracking-[0.14em] text-on-dark">
           BRICCA
         </span>
-        <span
-          className={cn(
-            "block text-[0.6rem] font-semibold tracking-[0.32em]",
-            tone === "light" ? "text-on-dark-muted" : "text-muted-foreground",
-          )}
-        >
+        <span className="block text-[0.6rem] font-semibold tracking-[0.32em] text-on-dark-muted">
           FOUNDATION
         </span>
       </span>

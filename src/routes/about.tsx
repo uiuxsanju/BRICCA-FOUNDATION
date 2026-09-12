@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import featureAbout from "@/assets/feature-about.jpg";
+import { featureAbout } from "@/content/images";
 import { CtaLink, PageHero, SectionHead } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import { StatStrip } from "@/components/site/StatStrip";

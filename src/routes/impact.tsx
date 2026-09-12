@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import featureImpact from "@/assets/feature-impact.jpg";
-import programHealth from "@/assets/program-health.jpg";
-import programEducation from "@/assets/program-education.jpg";
+import { featureImpact, programHealth, programEducation } from "@/content/images";
 import { CtaLink, PageHero, SectionHead } from "@/components/site/Bits";
 import { Counter, Reveal } from "@/components/site/Reveal";
 import { stats } from "@/content/bricca";

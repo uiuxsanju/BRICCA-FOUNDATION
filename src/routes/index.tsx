@@ -1,9 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ShieldCheck, Handshake, Award, MapPin } from "lucide-react";
 
-import heroImage from "@/assets/hero-community.jpg";
-import featureAbout from "@/assets/feature-about.jpg";
-import featureImpact from "@/assets/feature-impact.jpg";
+import { heroCommunity as heroImage, featureAbout, featureImpact } from "@/content/images";
 import { CtaLink, SectionHead } from "@/components/site/Bits";
 import { ProgramGrid } from "@/components/site/ProgramGrid";
 import { Reveal } from "@/components/site/Reveal";

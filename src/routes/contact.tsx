@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
-import featureAbout from "@/assets/feature-about.jpg";
+import { featureAbout } from "@/content/images";
 import { PageHero, PlaceholderNote } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import { contact, org } from "@/content/bricca";

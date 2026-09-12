@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import programLivelihood from "@/assets/program-livelihood.jpg";
-import programCoastal from "@/assets/program-coastal.jpg";
-import programWomen from "@/assets/program-women.jpg";
+import { programLivelihood, programCoastal, programWomen } from "@/content/images";
 import { CtaLink, PageHero, PlaceholderNote } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import { projects } from "@/content/bricca";

@@ -1,9 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 
-import programWomen from "@/assets/program-women.jpg";
-import programLivelihood from "@/assets/program-livelihood.jpg";
-import programSports from "@/assets/program-sports.jpg";
+import { programWomen, programLivelihood, programSports } from "@/content/images";
 import { PageHero } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 

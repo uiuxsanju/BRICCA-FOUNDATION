@@ -6,15 +6,17 @@
  * official details before publishing.
  */
 
-import education from "@/assets/program-education.jpg";
-import livelihood from "@/assets/program-livelihood.jpg";
-import women from "@/assets/program-women.jpg";
-import disability from "@/assets/program-disability.jpg";
-import health from "@/assets/program-health.jpg";
-import relief from "@/assets/program-relief.jpg";
-import agriculture from "@/assets/program-agriculture.jpg";
-import sports from "@/assets/program-sports.jpg";
-import coastal from "@/assets/program-coastal.jpg";
+import {
+  programEducation as education,
+  programLivelihood as livelihood,
+  programWomen as women,
+  programDisability as disability,
+  programHealth as health,
+  programRelief as relief,
+  programAgriculture as agriculture,
+  programSports as sports,
+  programCoastal as coastal,
+} from "@/content/images";
 
 export const org = {
   name: "BRICCA Foundation",

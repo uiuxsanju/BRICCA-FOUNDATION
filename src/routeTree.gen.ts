@@ -22,6 +22,9 @@ import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as RecognitionRouteImport } from './routes/recognition'
+import { Route as ProgrammesEducationRouteImport } from './routes/programmes/education'
+import { Route as ProgrammesLivelihoodSkillsRouteImport } from './routes/programmes/livelihood-skills'
+import { Route as ProgrammesWomenEmpowermentRouteImport } from './routes/programmes/women-empowerment'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -88,6 +91,23 @@ const RecognitionRoute = RecognitionRouteImport.update({
   path: '/recognition',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProgrammesEducationRoute = ProgrammesEducationRouteImport.update({
+  id: '/programmes/education',
+  path: '/programmes/education',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgrammesLivelihoodSkillsRoute =
+  ProgrammesLivelihoodSkillsRouteImport.update({
+    id: '/programmes/livelihood-skills',
+    path: '/programmes/livelihood-skills',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProgrammesWomenEmpowermentRoute =
+  ProgrammesWomenEmpowermentRouteImport.update({
+    id: '/programmes/women-empowerment',
+    path: '/programmes/women-empowerment',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -103,6 +123,9 @@ export interface FileRoutesByFullPath {
   '/programs': typeof ProgramsRoute
   '/projects': typeof ProjectsRoute
   '/recognition': typeof RecognitionRoute
+  '/programmes/education': typeof ProgrammesEducationRoute
+  '/programmes/livelihood-skills': typeof ProgrammesLivelihoodSkillsRoute
+  '/programmes/women-empowerment': typeof ProgrammesWomenEmpowermentRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -118,6 +141,9 @@ export interface FileRoutesByTo {
   '/programs': typeof ProgramsRoute
   '/projects': typeof ProjectsRoute
   '/recognition': typeof RecognitionRoute
+  '/programmes/education': typeof ProgrammesEducationRoute
+  '/programmes/livelihood-skills': typeof ProgrammesLivelihoodSkillsRoute
+  '/programmes/women-empowerment': typeof ProgrammesWomenEmpowermentRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -134,6 +160,9 @@ export interface FileRoutesById {
   '/programs': typeof ProgramsRoute
   '/projects': typeof ProjectsRoute
   '/recognition': typeof RecognitionRoute
+  '/programmes/education': typeof ProgrammesEducationRoute
+  '/programmes/livelihood-skills': typeof ProgrammesLivelihoodSkillsRoute
+  '/programmes/women-empowerment': typeof ProgrammesWomenEmpowermentRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -151,6 +180,9 @@ export interface FileRouteTypes {
     | '/programs'
     | '/projects'
     | '/recognition'
+    | '/programmes/education'
+    | '/programmes/livelihood-skills'
+    | '/programmes/women-empowerment'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -166,6 +198,9 @@ export interface FileRouteTypes {
     | '/programs'
     | '/projects'
     | '/recognition'
+    | '/programmes/education'
+    | '/programmes/livelihood-skills'
+    | '/programmes/women-empowerment'
   id:
     | '__root__'
     | '/'
@@ -181,6 +216,9 @@ export interface FileRouteTypes {
     | '/programs'
     | '/projects'
     | '/recognition'
+    | '/programmes/education'
+    | '/programmes/livelihood-skills'
+    | '/programmes/women-empowerment'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -197,6 +235,9 @@ export interface RootRouteChildren {
   ProgramsRoute: typeof ProgramsRoute
   ProjectsRoute: typeof ProjectsRoute
   RecognitionRoute: typeof RecognitionRoute
+  ProgrammesEducationRoute: typeof ProgrammesEducationRoute
+  ProgrammesLivelihoodSkillsRoute: typeof ProgrammesLivelihoodSkillsRoute
+  ProgrammesWomenEmpowermentRoute: typeof ProgrammesWomenEmpowermentRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -292,6 +333,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RecognitionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/programmes/education': {
+      id: '/programmes/education'
+      path: '/programmes/education'
+      fullPath: '/programmes/education'
+      preLoaderRoute: typeof ProgrammesEducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programmes/livelihood-skills': {
+      id: '/programmes/livelihood-skills'
+      path: '/programmes/livelihood-skills'
+      fullPath: '/programmes/livelihood-skills'
+      preLoaderRoute: typeof ProgrammesLivelihoodSkillsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programmes/women-empowerment': {
+      id: '/programmes/women-empowerment'
+      path: '/programmes/women-empowerment'
+      fullPath: '/programmes/women-empowerment'
+      preLoaderRoute: typeof ProgrammesWomenEmpowermentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -309,6 +371,9 @@ const rootRouteChildren: RootRouteChildren = {
   ProgramsRoute: ProgramsRoute,
   ProjectsRoute: ProjectsRoute,
   RecognitionRoute: RecognitionRoute,
+  ProgrammesEducationRoute: ProgrammesEducationRoute,
+  ProgrammesLivelihoodSkillsRoute: ProgrammesLivelihoodSkillsRoute,
+  ProgrammesWomenEmpowermentRoute: ProgrammesWomenEmpowermentRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

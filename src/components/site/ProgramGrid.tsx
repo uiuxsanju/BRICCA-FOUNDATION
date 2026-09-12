@@ -1,7 +1,16 @@
+import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 
 import { Reveal } from "@/components/site/Reveal";
 import { programs } from "@/content/bricca";
+
+// The three programmes with full detail pages. Every other programme links
+// through to the full /programs overview until its own detail page exists.
+const detailRoute: Record<string, string> = {
+  education: "/programmes/education",
+  livelihood: "/programmes/livelihood-skills",
+  women: "/programmes/women-empowerment",
+};
 
 export function ProgramGrid({ limit }: { limit?: number }) {
   const items = limit ? programs.slice(0, limit) : programs;
@@ -10,8 +19,12 @@ export function ProgramGrid({ limit }: { limit?: number }) {
     <ul className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
       {items.map((p, i) => (
         <Reveal as="li" key={p.slug} delay={(i % 3) * 90}>
-          <article className="group relative h-full overflow-hidden bg-card">
-            <div className="relative aspect-4/5 overflow-hidden">
+          <Link
+            to={detailRoute[p.slug] ?? "/programs"}
+            aria-label={`Explore the ${p.title} programme`}
+            className="group relative block h-full overflow-hidden bg-card"
+          >
+            <article className="relative aspect-4/5 overflow-hidden">
               <img
                 src={p.image}
                 alt={`${p.title} programme — ${p.short}`}
@@ -42,8 +55,8 @@ export function ProgramGrid({ limit }: { limit?: number }) {
                   />
                 </span>
               </div>
-            </div>
-          </article>
+            </article>
+          </Link>
         </Reveal>
       ))}
     </ul>

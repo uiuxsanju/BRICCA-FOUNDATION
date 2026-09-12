@@ -23,3 +23,24 @@ export const programRelief = px(6647008, 1200);
 export const programAgriculture = px(29912210, 1200);
 export const programSports = px(13509977, 1200);
 export const programCoastal = px(31790339, 1200);
+
+// Extra gallery images for the three detailed programme pages
+// (/programmes/education, /programmes/livelihood-skills, /programmes/women-empowerment)
+export const educationGallery = [
+  programEducation,
+  px(12199101, 1200),
+  px(15119089, 1200),
+  px(35558791, 1200),
+];
+
+export const livelihoodGallery = [
+  programLivelihood,
+  px(35216547, 1200),
+  px(3869086, 1200),
+];
+
+export const womenGallery = [
+  programWomen,
+  px(36746074, 1200),
+  px(36384099, 1200),
+];

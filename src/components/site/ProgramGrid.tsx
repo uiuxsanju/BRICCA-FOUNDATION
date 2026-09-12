@@ -3,14 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 
 import { Reveal } from "@/components/site/Reveal";
 import { programs } from "@/content/bricca";
+import { programmeDetails } from "@/content/programme-details";
 
-// The three programmes with full detail pages. Every other programme links
-// through to the full /programs overview until its own detail page exists.
-const detailRoute: Record<string, string> = {
-  education: "/programmes/education",
-  livelihood: "/programmes/livelihood-skills",
-  women: "/programmes/women-empowerment",
-};
+// Every programme now has its own detail page; this map is built from the
+// single source of truth in programme-details.ts so the two never drift.
+const detailRoute: Record<string, string> = Object.fromEntries(
+  programmeDetails.map((p) => [p.slug, p.route]),
+);
 
 export function ProgramGrid({ limit }: { limit?: number }) {
   const items = limit ? programs.slice(0, limit) : programs;

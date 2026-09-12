@@ -23,6 +23,6 @@ export const Route = createFileRoute("/programmes/livelihood-skills")({
 });
 
 function LivelihoodSkillsProgramme() {
-  const programme = getProgrammeDetail("livelihood-skills")!;
+  const programme = getProgrammeDetail("livelihood")!;
   return <ProgrammeDetailPage programme={programme} />;
 }

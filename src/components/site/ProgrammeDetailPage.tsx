@@ -6,14 +6,19 @@ import { Reveal } from "@/components/site/Reveal";
 import { StatStrip } from "@/components/site/StatStrip";
 import { type ProgrammeDetail, programmeDetails } from "@/content/programme-details";
 
-const routeForSlug: Record<ProgrammeDetail["slug"], string> = {
-  education: "/programmes/education",
-  "livelihood-skills": "/programmes/livelihood-skills",
-  "women-empowerment": "/programmes/women-empowerment",
-};
+/** Next 3 programmes after this one, wrapping around — keeps "related" varied across all 9. */
+function getRelated(current: ProgrammeDetail): ProgrammeDetail[] {
+  const i = programmeDetails.findIndex((p) => p.slug === current.slug);
+  const related: ProgrammeDetail[] = [];
+  for (let step = 1; related.length < 3 && step < programmeDetails.length; step++) {
+    const next = programmeDetails[(i + step) % programmeDetails.length];
+    if (next) related.push(next);
+  }
+  return related;
+}
 
 export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail }) {
-  const related = programmeDetails.filter((p) => p.slug !== programme.slug);
+  const related = getRelated(programme);
 
   return (
     <>
@@ -169,11 +174,11 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
       <section className="py-20 lg:py-24">
         <div className="container-page">
           <SectionHead eyebrow="Keep exploring" title="Related programmes" />
-          <ul className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
             {related.map((p) => (
               <li key={p.slug} className="bg-card">
                 <Link
-                  to={routeForSlug[p.slug]}
+                  to={p.route}
                   className="group flex h-full flex-col justify-between gap-6 p-7"
                 >
                   <div>

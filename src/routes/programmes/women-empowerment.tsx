@@ -23,6 +23,6 @@ export const Route = createFileRoute("/programmes/women-empowerment")({
 });
 
 function WomenEmpowermentProgramme() {
-  const programme = getProgrammeDetail("women-empowerment")!;
+  const programme = getProgrammeDetail("women")!;
   return <ProgrammeDetailPage programme={programme} />;
 }

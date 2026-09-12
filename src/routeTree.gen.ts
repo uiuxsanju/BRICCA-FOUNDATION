@@ -22,8 +22,14 @@ import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as RecognitionRouteImport } from './routes/recognition'
+import { Route as ProgrammesAgricultureRouteImport } from './routes/programmes/agriculture'
+import { Route as ProgrammesDisabilityInclusionRouteImport } from './routes/programmes/disability-inclusion'
+import { Route as ProgrammesDisasterReliefRouteImport } from './routes/programmes/disaster-relief'
 import { Route as ProgrammesEducationRouteImport } from './routes/programmes/education'
+import { Route as ProgrammesHealthRouteImport } from './routes/programmes/health'
 import { Route as ProgrammesLivelihoodSkillsRouteImport } from './routes/programmes/livelihood-skills'
+import { Route as ProgrammesSportsRouteImport } from './routes/programmes/sports'
+import { Route as ProgrammesTribalCoastalRouteImport } from './routes/programmes/tribal-coastal'
 import { Route as ProgrammesWomenEmpowermentRouteImport } from './routes/programmes/women-empowerment'
 
 const IndexRoute = IndexRouteImport.update({
@@ -91,9 +97,31 @@ const RecognitionRoute = RecognitionRouteImport.update({
   path: '/recognition',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProgrammesAgricultureRoute = ProgrammesAgricultureRouteImport.update({
+  id: '/programmes/agriculture',
+  path: '/programmes/agriculture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgrammesDisabilityInclusionRoute =
+  ProgrammesDisabilityInclusionRouteImport.update({
+    id: '/programmes/disability-inclusion',
+    path: '/programmes/disability-inclusion',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProgrammesDisasterReliefRoute =
+  ProgrammesDisasterReliefRouteImport.update({
+    id: '/programmes/disaster-relief',
+    path: '/programmes/disaster-relief',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProgrammesEducationRoute = ProgrammesEducationRouteImport.update({
   id: '/programmes/education',
   path: '/programmes/education',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgrammesHealthRoute = ProgrammesHealthRouteImport.update({
+  id: '/programmes/health',
+  path: '/programmes/health',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgrammesLivelihoodSkillsRoute =
@@ -102,6 +130,16 @@ const ProgrammesLivelihoodSkillsRoute =
     path: '/programmes/livelihood-skills',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ProgrammesSportsRoute = ProgrammesSportsRouteImport.update({
+  id: '/programmes/sports',
+  path: '/programmes/sports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgrammesTribalCoastalRoute = ProgrammesTribalCoastalRouteImport.update({
+  id: '/programmes/tribal-coastal',
+  path: '/programmes/tribal-coastal',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProgrammesWomenEmpowermentRoute =
   ProgrammesWomenEmpowermentRouteImport.update({
     id: '/programmes/women-empowerment',
@@ -123,8 +161,14 @@ export interface FileRoutesByFullPath {
   '/programs': typeof ProgramsRoute
   '/projects': typeof ProjectsRoute
   '/recognition': typeof RecognitionRoute
+  '/programmes/agriculture': typeof ProgrammesAgricultureRoute
+  '/programmes/disability-inclusion': typeof ProgrammesDisabilityInclusionRoute
+  '/programmes/disaster-relief': typeof ProgrammesDisasterReliefRoute
   '/programmes/education': typeof ProgrammesEducationRoute
+  '/programmes/health': typeof ProgrammesHealthRoute
   '/programmes/livelihood-skills': typeof ProgrammesLivelihoodSkillsRoute
+  '/programmes/sports': typeof ProgrammesSportsRoute
+  '/programmes/tribal-coastal': typeof ProgrammesTribalCoastalRoute
   '/programmes/women-empowerment': typeof ProgrammesWomenEmpowermentRoute
 }
 export interface FileRoutesByTo {
@@ -141,8 +185,14 @@ export interface FileRoutesByTo {
   '/programs': typeof ProgramsRoute
   '/projects': typeof ProjectsRoute
   '/recognition': typeof RecognitionRoute
+  '/programmes/agriculture': typeof ProgrammesAgricultureRoute
+  '/programmes/disability-inclusion': typeof ProgrammesDisabilityInclusionRoute
+  '/programmes/disaster-relief': typeof ProgrammesDisasterReliefRoute
   '/programmes/education': typeof ProgrammesEducationRoute
+  '/programmes/health': typeof ProgrammesHealthRoute
   '/programmes/livelihood-skills': typeof ProgrammesLivelihoodSkillsRoute
+  '/programmes/sports': typeof ProgrammesSportsRoute
+  '/programmes/tribal-coastal': typeof ProgrammesTribalCoastalRoute
   '/programmes/women-empowerment': typeof ProgrammesWomenEmpowermentRoute
 }
 export interface FileRoutesById {
@@ -160,8 +210,14 @@ export interface FileRoutesById {
   '/programs': typeof ProgramsRoute
   '/projects': typeof ProjectsRoute
   '/recognition': typeof RecognitionRoute
+  '/programmes/agriculture': typeof ProgrammesAgricultureRoute
+  '/programmes/disability-inclusion': typeof ProgrammesDisabilityInclusionRoute
+  '/programmes/disaster-relief': typeof ProgrammesDisasterReliefRoute
   '/programmes/education': typeof ProgrammesEducationRoute
+  '/programmes/health': typeof ProgrammesHealthRoute
   '/programmes/livelihood-skills': typeof ProgrammesLivelihoodSkillsRoute
+  '/programmes/sports': typeof ProgrammesSportsRoute
+  '/programmes/tribal-coastal': typeof ProgrammesTribalCoastalRoute
   '/programmes/women-empowerment': typeof ProgrammesWomenEmpowermentRoute
 }
 export interface FileRouteTypes {
@@ -180,8 +236,14 @@ export interface FileRouteTypes {
     | '/programs'
     | '/projects'
     | '/recognition'
+    | '/programmes/agriculture'
+    | '/programmes/disability-inclusion'
+    | '/programmes/disaster-relief'
     | '/programmes/education'
+    | '/programmes/health'
     | '/programmes/livelihood-skills'
+    | '/programmes/sports'
+    | '/programmes/tribal-coastal'
     | '/programmes/women-empowerment'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -198,8 +260,14 @@ export interface FileRouteTypes {
     | '/programs'
     | '/projects'
     | '/recognition'
+    | '/programmes/agriculture'
+    | '/programmes/disability-inclusion'
+    | '/programmes/disaster-relief'
     | '/programmes/education'
+    | '/programmes/health'
     | '/programmes/livelihood-skills'
+    | '/programmes/sports'
+    | '/programmes/tribal-coastal'
     | '/programmes/women-empowerment'
   id:
     | '__root__'
@@ -216,8 +284,14 @@ export interface FileRouteTypes {
     | '/programs'
     | '/projects'
     | '/recognition'
+    | '/programmes/agriculture'
+    | '/programmes/disability-inclusion'
+    | '/programmes/disaster-relief'
     | '/programmes/education'
+    | '/programmes/health'
     | '/programmes/livelihood-skills'
+    | '/programmes/sports'
+    | '/programmes/tribal-coastal'
     | '/programmes/women-empowerment'
   fileRoutesById: FileRoutesById
 }
@@ -235,8 +309,14 @@ export interface RootRouteChildren {
   ProgramsRoute: typeof ProgramsRoute
   ProjectsRoute: typeof ProjectsRoute
   RecognitionRoute: typeof RecognitionRoute
+  ProgrammesAgricultureRoute: typeof ProgrammesAgricultureRoute
+  ProgrammesDisabilityInclusionRoute: typeof ProgrammesDisabilityInclusionRoute
+  ProgrammesDisasterReliefRoute: typeof ProgrammesDisasterReliefRoute
   ProgrammesEducationRoute: typeof ProgrammesEducationRoute
+  ProgrammesHealthRoute: typeof ProgrammesHealthRoute
   ProgrammesLivelihoodSkillsRoute: typeof ProgrammesLivelihoodSkillsRoute
+  ProgrammesSportsRoute: typeof ProgrammesSportsRoute
+  ProgrammesTribalCoastalRoute: typeof ProgrammesTribalCoastalRoute
   ProgrammesWomenEmpowermentRoute: typeof ProgrammesWomenEmpowermentRoute
 }
 
@@ -333,6 +413,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RecognitionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/programmes/agriculture': {
+      id: '/programmes/agriculture'
+      path: '/programmes/agriculture'
+      fullPath: '/programmes/agriculture'
+      preLoaderRoute: typeof ProgrammesAgricultureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programmes/disability-inclusion': {
+      id: '/programmes/disability-inclusion'
+      path: '/programmes/disability-inclusion'
+      fullPath: '/programmes/disability-inclusion'
+      preLoaderRoute: typeof ProgrammesDisabilityInclusionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programmes/disaster-relief': {
+      id: '/programmes/disaster-relief'
+      path: '/programmes/disaster-relief'
+      fullPath: '/programmes/disaster-relief'
+      preLoaderRoute: typeof ProgrammesDisasterReliefRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/programmes/education': {
       id: '/programmes/education'
       path: '/programmes/education'
@@ -340,11 +441,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgrammesEducationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/programmes/health': {
+      id: '/programmes/health'
+      path: '/programmes/health'
+      fullPath: '/programmes/health'
+      preLoaderRoute: typeof ProgrammesHealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/programmes/livelihood-skills': {
       id: '/programmes/livelihood-skills'
       path: '/programmes/livelihood-skills'
       fullPath: '/programmes/livelihood-skills'
       preLoaderRoute: typeof ProgrammesLivelihoodSkillsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programmes/sports': {
+      id: '/programmes/sports'
+      path: '/programmes/sports'
+      fullPath: '/programmes/sports'
+      preLoaderRoute: typeof ProgrammesSportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programmes/tribal-coastal': {
+      id: '/programmes/tribal-coastal'
+      path: '/programmes/tribal-coastal'
+      fullPath: '/programmes/tribal-coastal'
+      preLoaderRoute: typeof ProgrammesTribalCoastalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/programmes/women-empowerment': {
@@ -371,8 +493,14 @@ const rootRouteChildren: RootRouteChildren = {
   ProgramsRoute: ProgramsRoute,
   ProjectsRoute: ProjectsRoute,
   RecognitionRoute: RecognitionRoute,
+  ProgrammesAgricultureRoute: ProgrammesAgricultureRoute,
+  ProgrammesDisabilityInclusionRoute: ProgrammesDisabilityInclusionRoute,
+  ProgrammesDisasterReliefRoute: ProgrammesDisasterReliefRoute,
   ProgrammesEducationRoute: ProgrammesEducationRoute,
+  ProgrammesHealthRoute: ProgrammesHealthRoute,
   ProgrammesLivelihoodSkillsRoute: ProgrammesLivelihoodSkillsRoute,
+  ProgrammesSportsRoute: ProgrammesSportsRoute,
+  ProgrammesTribalCoastalRoute: ProgrammesTribalCoastalRoute,
   ProgrammesWomenEmpowermentRoute: ProgrammesWomenEmpowermentRoute,
 }
 export const routeTree = rootRouteImport

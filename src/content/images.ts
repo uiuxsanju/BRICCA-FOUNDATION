@@ -44,3 +44,30 @@ export const womenGallery = [
   px(36746074, 1200),
   px(36384099, 1200),
 ];
+
+export const disabilityGallery = [
+  programDisability,
+  px(6194680, 1200),
+  px(8415827, 1200),
+  px(8127701, 1200),
+];
+
+export const healthGallery = [
+  programHealth,
+  px(33127835, 1200),
+  px(33127869, 1200),
+  px(33034061, 1200),
+];
+
+export const reliefGallery = [programRelief, px(6591161, 1200), px(6995260, 1200)];
+
+export const agricultureGallery = [
+  programAgriculture,
+  px(20238488, 1200),
+  px(20344368, 1200),
+  px(20515274, 1200),
+];
+
+export const sportsGallery = [programSports, px(2549230, 1200), px(30969813, 1200)];
+
+export const coastalGallery = [programCoastal, px(12865872, 1200)];

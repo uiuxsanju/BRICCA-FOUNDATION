@@ -33,6 +33,7 @@ function Impact() {
       <PageHero
         eyebrow="Our impact"
         title="Impact we can count, and account for"
+        titleTe="మేము లెక్కించి, జవాబుదారీగా చెప్పగలిగే ప్రభావం"
         lede="Every figure on this page comes from BRICCA Foundation's own programme records."
       />
 
@@ -66,7 +67,11 @@ function Impact() {
 
       <section className="border-y border-border bg-surface py-20 lg:py-24">
         <div className="container-page">
-          <SectionHead eyebrow="Documented figures" title="The numbers behind the work" />
+          <SectionHead
+            eyebrow="Documented figures"
+            title="The numbers behind the work"
+            titleTe="పని వెనుక ఉన్న సంఖ్యలు"
+          />
           <ul className="mt-14 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
             {figures.map((s, i) => (
               <Reveal as="li" key={s.label} delay={i * 90} className="bg-card p-8 lg:p-10">

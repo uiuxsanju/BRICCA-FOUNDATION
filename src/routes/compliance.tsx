@@ -31,6 +31,7 @@ function Compliance() {
       <PageHero
         eyebrow="Trust & compliance"
         title="Transparent. Accountable. Compliant."
+        titleTe="పారదర్శకత. జవాబుదారీతనం. నిబంధనల పాటింపు."
         lede={`Every registration below is held by BRICCA Foundation's registered legal entity, ${contact.legalName}, at ${contact.address}.`}
       />
 
@@ -75,6 +76,7 @@ function Compliance() {
             eyebrow="Financial transparency"
             tone="light"
             title="Audited financial statements"
+            titleTe="ఆడిట్ చేసిన ఆర్థిక నివేదికలు"
             lede="BRICCA Foundation maintains audited financial statements and reports to its donors and partners on programme spending."
           />
           <Reveal className="self-center">

@@ -35,6 +35,7 @@ function Contact() {
       <PageHero
         eyebrow="Contact"
         title="Talk to us about partnership, giving or volunteering"
+        titleTe="భాగస్వామ్యం, విరాళం లేదా వాలంటీరింగ్ గురించి మాట్లాడండి"
         lede={`${org.name} responds to CSR teams, donors, volunteers and institutions carrying out due diligence.`}
       />
 

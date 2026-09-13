@@ -35,6 +35,9 @@ function Donate() {
             <h1 className="display-xl mt-6 text-on-dark">
               Together We Can Create Lasting Change
             </h1>
+            <p lang="te" className="mt-3 font-display text-lg font-semibold text-accent lg:text-xl">
+              కలిసి మనం శాశ్వత మార్పు తీసుకురాగలం
+            </p>
             <p className="lede mt-7 text-on-dark-muted">
               Contributions fund classroom support, vocational training, community health camps and
               emergency relief for families across Andhra Pradesh.
@@ -58,6 +61,7 @@ function Donate() {
           <Reveal>
             <Landmark className="size-7 text-primary" aria-hidden="true" />
             <h2 className="display-md mt-6 text-primary">Bank transfer details</h2>
+            <p lang="te" className="mt-1 font-display text-base font-semibold text-accent">బ్యాంక్ బదిలీ వివరాలు</p>
             <p className="mt-3 max-w-xl text-sm text-muted-foreground">
               For direct bank transfers and CSR disbursements. Both accounts are held in the
               name of BRICCA Foundation's registered legal entity.
@@ -88,6 +92,7 @@ function Donate() {
           <Reveal className="border border-dashed border-border-strong bg-surface p-8">
             <QrCode className="size-7 text-border-strong" aria-hidden="true" />
             <h2 className="mt-6 font-display text-xl font-bold text-primary">Scan to pay</h2>
+            <p lang="te" className="mt-1 text-sm font-semibold text-accent">స్కాన్ చేసి చెల్లించండి</p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               A UPI QR code will be published here as soon as BRICCA Foundation's official
               payment QR is confirmed. Until then, please use the bank transfer details above.

@@ -30,6 +30,7 @@ function Partners() {
       <PageHero
         eyebrow="Partners & collaborations"
         title="Building Impact Through Partnership"
+        titleTe="భాగస్వామ్యంతో ప్రభావాన్ని నిర్మిస్తూ"
         lede="Programmes are stronger when they are designed with partners who bring funding, technical depth and accountability."
       />
 
@@ -61,6 +62,7 @@ function Partners() {
           <SectionHead
             eyebrow="Partner with us"
             title="What a partnership with BRICCA looks like"
+            titleTe="BRICCA తో భాగస్వామ్యం ఎలా ఉంటుంది"
             lede="We work with CSR teams and institutions that need programme delivery on the ground plus documentation they can report on."
           />
           <ul className="mt-14 grid gap-px bg-border lg:grid-cols-3">

@@ -25,13 +25,18 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
       <PageHero
         eyebrow={`Programme ${programme.no}`}
         title={programme.title}
+        titleTe={programme.titleTe}
         lede={programme.short}
       />
 
       {/* Overview */}
       <section className="py-20 lg:py-24">
         <div className="container-page">
-          <SectionHead eyebrow="Overview" title="What this programme is" />
+          <SectionHead
+            eyebrow="Overview"
+            title="What this programme is"
+            titleTe="ఈ కార్యక్రమం ఏమిటి"
+          />
           <Reveal className="mt-6 max-w-3xl">
             <p className="text-base leading-relaxed text-muted-foreground">
               {programme.overview}
@@ -43,7 +48,11 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
       {/* What we do */}
       <section className="border-t border-border bg-surface py-20 lg:py-24">
         <div className="container-page">
-          <SectionHead eyebrow="What we do" title="Our day-to-day work in the community" />
+          <SectionHead
+            eyebrow="What we do"
+            title="Our day-to-day work in the community"
+            titleTe="సమాజంలో మా నిత్య కార్యకలాపాలు"
+          />
           <ul className="mt-10 grid gap-5 sm:grid-cols-2">
             {programme.whatWeDo.map((item, i) => (
               <Reveal
@@ -68,12 +77,14 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
         <div className="container-page grid gap-14 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <p className="eyebrow">Why it matters</p>
+            <p lang="te" className="mt-1 text-sm font-semibold text-accent">ఇది ఎందుకు ముఖ్యం</p>
             <p className="mt-4 rule-accent text-base leading-relaxed text-muted-foreground">
               {programme.whyItMatters}
             </p>
           </Reveal>
           <Reveal delay={80}>
             <p className="eyebrow">Who we serve</p>
+            <p lang="te" className="mt-1 text-sm font-semibold text-accent">మేము ఎవరికి సేవ చేస్తాము</p>
             <p className="mt-4 rule-accent text-base leading-relaxed text-muted-foreground">
               {programme.whoWeServe}
             </p>
@@ -87,6 +98,7 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
           <SectionHead
             eyebrow="Key activities"
             title="How the programme runs on the ground"
+            titleTe="ఈ కార్యక్రమం క్షేత్రస్థాయిలో ఎలా నడుస్తుంది"
           />
           <ol className="mt-10 grid gap-4">
             {programme.keyActivities.map((item, i) => (
@@ -109,7 +121,11 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
       {/* Our approach */}
       <section className="py-20 lg:py-24">
         <div className="container-page">
-          <SectionHead eyebrow="Our approach" title="Principles that guide this work" />
+          <SectionHead
+            eyebrow="Our approach"
+            title="Principles that guide this work"
+            titleTe="ఈ పనిని నడిపించే సూత్రాలు"
+          />
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
             {programme.ourApproach.map((item, i) => (
               <Reveal
@@ -130,6 +146,7 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
           <SectionHead
             eyebrow="Impact so far"
             title="Documented reach across BRICCA's programmes"
+            titleTe="BRICCA కార్యక్రమాల నమోదైన ప్రభావం"
             tone="light"
             lede="These figures reflect BRICCA Foundation's overall, organisation-wide reach since 2019 — programme-specific figures for this page will be added once documented and verified."
           />
@@ -142,7 +159,11 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
       {/* Field stories */}
       <section className="py-20 lg:py-24">
         <div className="container-page max-w-3xl">
-          <SectionHead eyebrow="Field stories" title="Stories from the communities we work with" />
+          <SectionHead
+            eyebrow="Field stories"
+            title="Stories from the communities we work with"
+            titleTe="మేము పనిచేసే సమాజాల కథలు"
+          />
           <PlaceholderNote>
             Field stories from this programme are being documented with the consent of the
             families and communities involved, and will be published here as they become
@@ -154,7 +175,11 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
       {/* Gallery */}
       <section className="border-t border-border bg-surface py-20 lg:py-24">
         <div className="container-page">
-          <SectionHead eyebrow="Image gallery" title={`${programme.title} in the field`} />
+          <SectionHead
+            eyebrow="Image gallery"
+            title={`${programme.title} in the field`}
+            titleTe={`${programme.titleTe} క్షేత్రస్థాయిలో`}
+          />
           <div className="mt-10 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
             {programme.gallery.map((src, i) => (
               <Reveal key={src} delay={i * 60} className="aspect-square overflow-hidden">
@@ -173,7 +198,11 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
       {/* Related programmes */}
       <section className="py-20 lg:py-24">
         <div className="container-page">
-          <SectionHead eyebrow="Keep exploring" title="Related programmes" />
+          <SectionHead
+            eyebrow="Keep exploring"
+            title="Related programmes"
+            titleTe="సంబంధిత కార్యక్రమాలు"
+          />
           <ul className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
             {related.map((p) => (
               <li key={p.slug} className="bg-card">
@@ -188,6 +217,7 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
                     <h3 className="mt-2 font-display text-lg font-bold text-primary">
                       {p.title}
                     </h3>
+                    <p lang="te" className="mt-0.5 text-xs font-semibold text-accent">{p.titleTe}</p>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                       {p.short}
                     </p>
@@ -239,6 +269,9 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
             <h2 className="display-md mt-4 max-w-xl text-on-dark">
               Help this programme reach further
             </h2>
+            <p lang="te" className="mt-2 font-display text-base font-semibold text-accent">
+              ఈ కార్యక్రమం మరింత మందికి చేరేలా సహాయపడండి
+            </p>
           </div>
           <div className="flex flex-wrap gap-4">
             <CtaLink to="/donate" variant="solid">

@@ -42,6 +42,7 @@ export type Program = {
   no: string;
   slug: string;
   title: string;
+  titleTe: string;
   short: string;
   objective: string;
   beneficiaries: string;
@@ -53,6 +54,7 @@ export const programs: Program[] = [
     no: "01",
     slug: "education",
     title: "Education",
+    titleTe: "విద్య",
     short: "Building stronger foundations for learning.",
     objective:
       "Improve access to quality learning and digital education for children in underserved communities.",
@@ -63,6 +65,7 @@ export const programs: Program[] = [
     no: "02",
     slug: "livelihood",
     title: "Livelihood & Skills",
+    titleTe: "జీవనోపాధి & నైపుణ్యాలు",
     short: "Skills that lead to dignified employment.",
     objective:
       "Deliver vocational and digital skill training that connects young people to employment and enterprise.",
@@ -73,6 +76,7 @@ export const programs: Program[] = [
     no: "03",
     slug: "women",
     title: "Women Empowerment",
+    titleTe: "మహిళా సాధికారత",
     short: "Independence through enterprise and voice.",
     objective:
       "Support women with training, group formation and entrepreneurship pathways.",
@@ -83,6 +87,7 @@ export const programs: Program[] = [
     no: "04",
     slug: "disability-inclusion",
     title: "Disability Inclusion",
+    titleTe: "వికలాంగుల చేరిక",
     short: "Access, training and equal opportunity.",
     objective:
       "Create inclusive training and accessible opportunities for persons with disabilities.",
@@ -93,6 +98,7 @@ export const programs: Program[] = [
     no: "05",
     slug: "health",
     title: "Health",
+    titleTe: "ఆరోగ్యం",
     short: "Community health, close to home.",
     objective:
       "Run health awareness, screening and vaccination support in underserved villages.",
@@ -103,6 +109,7 @@ export const programs: Program[] = [
     no: "06",
     slug: "disaster-relief",
     title: "Disaster Relief",
+    titleTe: "విపత్తు సహాయం",
     short: "Rapid, dignified support in crisis.",
     objective:
       "Provide relief material and community support during emergencies and disasters.",
@@ -113,6 +120,7 @@ export const programs: Program[] = [
     no: "07",
     slug: "agriculture",
     title: "Agriculture",
+    titleTe: "వ్యవసాయం",
     short: "Sustainable farming, stronger incomes.",
     objective:
       "Promote sustainable agricultural practices and farmer support activities.",
@@ -123,6 +131,7 @@ export const programs: Program[] = [
     no: "08",
     slug: "sports",
     title: "Sports",
+    titleTe: "క్రీడలు",
     short: "Confidence, discipline and teamwork.",
     objective:
       "Use sports activities to build confidence, health and life skills among young people.",
@@ -133,6 +142,7 @@ export const programs: Program[] = [
     no: "09",
     slug: "tribal-coastal",
     title: "Tribal & Coastal Development",
+    titleTe: "గిరిజన & తీరప్రాంత అభివృద్ధి",
     short: "Programmes shaped by local realities.",
     objective:
       "Deliver community development work designed for tribal and coastal contexts.",

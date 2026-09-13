@@ -30,6 +30,7 @@ function Projects() {
       <PageHero
         eyebrow="Previous projects"
         title="Delivered with donors who ask for evidence"
+        titleTe="ఆధారాలు అడిగే దాతలతో కలిసి పూర్తి చేసినవి"
         lede="BRICCA Foundation has implemented programmes supported by retail-sector, institutional and port-sector partners."
       />
 

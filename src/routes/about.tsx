@@ -32,6 +32,7 @@ function About() {
       <PageHero
         eyebrow="About us"
         title="A foundation built in the communities it serves"
+        titleTe="తాను సేవ చేసే సమాజాలలోనే నిర్మించబడిన సంస్థ"
         lede={org.intro}
       />
 
@@ -82,6 +83,7 @@ function About() {
         <SectionHead
           eyebrow="How we work"
           title="Local partnership, documented outcomes"
+            titleTe="స్థానిక భాగస్వామ్యం, నమోదైన ఫలితాలు"
           lede="Programmes are designed with community input, delivered with partners, and reported with beneficiary-level records."
         />
         <ol className="mt-14 grid gap-px bg-border lg:grid-cols-3">

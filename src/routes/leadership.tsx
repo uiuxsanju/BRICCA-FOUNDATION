@@ -33,6 +33,7 @@ function Leadership() {
       <PageHero
         eyebrow="Leadership"
         title="Led by people who know the villages by name"
+        titleTe="గ్రామాలను పేరు పేరునా తెలిసిన వారి నాయకత్వం"
         lede={`${org.name} is led by its founder with support from programme, field, finance and reporting functions.`}
       />
 
@@ -67,6 +68,7 @@ function Leadership() {
           <SectionHead
             eyebrow="The team"
             title="Functions that keep programmes accountable"
+            titleTe="కార్యక్రమాలను జవాబుదారీగా ఉంచే విభాగాలు"
             lede="Roles are documented at function level; individual names can be added once you share them."
           />
           <ul className="mt-14 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">

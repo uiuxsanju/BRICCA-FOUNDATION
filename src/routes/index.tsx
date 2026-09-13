@@ -54,6 +54,9 @@ function Home() {
               <br />
               Empowering Communities.
             </h1>
+            <p lang="te" className="mt-3 font-display text-lg font-semibold text-accent lg:text-xl">
+              జీవితాలను మారుస్తూ. సమాజాలను శక్తివంతం చేస్తూ.
+            </p>
             <p className="lede mt-7 text-on-dark-muted">{org.intro}</p>
             <div className="mt-10 flex flex-wrap gap-3">
               <CtaLink to="/donate">DONATE NOW</CtaLink>
@@ -133,6 +136,7 @@ function Home() {
           <SectionHead
             eyebrow="Our focus areas"
             title="Nine programmes, one commitment to dignity"
+            titleTe="తొమ్మిది కార్యక్రమాలు, గౌరవం పట్ల ఒకే నిబద్ధత"
             lede="Each focus area responds to a documented need in the communities we serve, from classrooms and skill centres to health camps and disaster relief."
           />
         </div>
@@ -153,6 +157,7 @@ function Home() {
               eyebrow="Our impact"
               tone="light"
               title="Measured in families, not in adjectives"
+              titleTe="కుటుంబాల సంఖ్యలో కొలవబడింది, మాటల్లో కాదు"
               lede="Every figure below is drawn from BRICCA Foundation's own programme records."
             />
             <div className="mt-10">
@@ -188,6 +193,7 @@ function Home() {
         <SectionHead
           eyebrow="Partners & collaborations"
           title="Building Impact Through Partnership"
+          titleTe="భాగస్వామ్యంతో ప్రభావాన్ని నిర్మిస్తూ"
           lede="BRICCA Foundation works alongside corporate, institutional and development partners to design and deliver programmes at scale."
         />
         <ul className="mt-14 grid gap-px bg-border sm:grid-cols-3">
@@ -214,7 +220,11 @@ function Home() {
 
       <section className="border-y border-border bg-surface py-24 lg:py-28">
         <div className="container-page">
-          <SectionHead eyebrow="Recognition" title="Awarded for work on the ground" />
+          <SectionHead
+            eyebrow="Recognition"
+            title="Awarded for work on the ground"
+            titleTe="క్షేత్రస్థాయి పనికి గుర్తింపు"
+          />
           <ol className="mt-14 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
             {awards.map((a, i) => (
               <Reveal as="li" key={`${a.year}-${a.title}`} delay={i * 90} className="bg-card p-7">

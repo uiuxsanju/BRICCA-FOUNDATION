@@ -27,6 +27,7 @@ export type ProgrammeDetail = {
   route: string;
   no: string;
   title: string;
+  titleTe: string;
   short: string;
   overview: string;
   whatWeDo: string[];
@@ -43,6 +44,7 @@ export const programmeDetails: ProgrammeDetail[] = [
     route: "/programmes/education",
     no: "01",
     title: "Education",
+    titleTe: "విద్య",
     short: "Building stronger foundations for learning.",
     overview:
       "BRICCA Foundation's education programme works alongside government schools and out-of-school children in rural and tribal parts of Andhra Pradesh, focusing on the basics that make everything else possible: regular attendance, reading and writing confidence, and comfort with numbers. The aim is simple — every child within reach of our team should have a real chance to learn at grade level, regardless of where they were born.",
@@ -77,6 +79,7 @@ export const programmeDetails: ProgrammeDetail[] = [
     route: "/programmes/livelihood-skills",
     no: "02",
     title: "Livelihood & Skills",
+    titleTe: "జీవనోపాధి & నైపుణ్యాలు",
     short: "Skills that lead to dignified employment.",
     overview:
       "The Livelihood & Skills programme gives unemployed and underemployed youth practical, market-relevant training — from vocational trades to basic digital skills — designed to connect directly to real employment or self-employment opportunities, not just a certificate.",
@@ -110,6 +113,7 @@ export const programmeDetails: ProgrammeDetail[] = [
     route: "/programmes/women-empowerment",
     no: "03",
     title: "Women Empowerment",
+    titleTe: "మహిళా సాధికారత",
     short: "Independence through enterprise and voice.",
     overview:
       "BRICCA's Women Empowerment programme supports women in rural and coastal communities to build financial independence and a stronger voice in decisions that affect their households and communities — through skills training, group formation, and support for small enterprise.",
@@ -142,6 +146,7 @@ export const programmeDetails: ProgrammeDetail[] = [
     route: "/programmes/disability-inclusion",
     no: "04",
     title: "Disability Inclusion",
+    titleTe: "వికలాంగుల చేరిక",
     short: "Access, training and equal opportunity.",
     overview:
       "BRICCA's Disability Inclusion programme works to make training, opportunity and everyday community life more accessible for persons with disabilities and their families, so that disability is not the reason someone is left out of education, work or community participation.",
@@ -174,6 +179,7 @@ export const programmeDetails: ProgrammeDetail[] = [
     route: "/programmes/health",
     no: "05",
     title: "Health",
+    titleTe: "ఆరోగ్యం",
     short: "Community health, close to home.",
     overview:
       "BRICCA's Health programme brings basic health awareness, screening and vaccination support directly into underserved villages, so that distance and cost are less of a barrier to routine care that many communities would otherwise go without.",
@@ -206,6 +212,7 @@ export const programmeDetails: ProgrammeDetail[] = [
     route: "/programmes/disaster-relief",
     no: "06",
     title: "Disaster Relief",
+    titleTe: "విపత్తు సహాయం",
     short: "Rapid, dignified support in crisis.",
     overview:
       "BRICCA's Disaster Relief programme provides essential relief material and on-ground community support to families affected by emergencies and natural disasters, aiming to respond quickly while treating every family with dignity.",
@@ -238,6 +245,7 @@ export const programmeDetails: ProgrammeDetail[] = [
     route: "/programmes/agriculture",
     no: "07",
     title: "Agriculture",
+    titleTe: "వ్యవసాయం",
     short: "Sustainable farming, stronger incomes.",
     overview:
       "BRICCA's Agriculture programme works with small and marginal farmers to promote sustainable farming practices and provide practical support, aiming to strengthen incomes without depending on approaches that aren't suited to the farmer's own land and resources.",
@@ -270,6 +278,7 @@ export const programmeDetails: ProgrammeDetail[] = [
     route: "/programmes/sports",
     no: "08",
     title: "Sports",
+    titleTe: "క్రీడలు",
     short: "Confidence, discipline and teamwork.",
     overview:
       "BRICCA's Sports programme uses organised sporting activity to help children and youth build confidence, discipline, fitness and teamwork — skills that carry over well beyond the field or the court.",
@@ -302,6 +311,7 @@ export const programmeDetails: ProgrammeDetail[] = [
     route: "/programmes/tribal-coastal",
     no: "09",
     title: "Tribal & Coastal Development",
+    titleTe: "గిరిజన & తీరప్రాంత అభివృద్ధి",
     short: "Programmes shaped by local realities.",
     overview:
       "BRICCA's Tribal & Coastal Development programme delivers community development work specifically designed around the realities of tribal and coastal communities in Andhra Pradesh, rather than applying the same approach used elsewhere in the state.",

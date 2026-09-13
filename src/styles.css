@@ -1,6 +1,10 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "@fontsource/noto-sans-telugu/400.css";
+@import "@fontsource/noto-sans-telugu/500.css";
+@import "@fontsource/noto-sans-telugu/700.css";
+@import "@fontsource/noto-sans-telugu/800.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -114,6 +118,13 @@
     font-family: var(--font-display);
     letter-spacing: -0.025em;
     text-wrap: balance;
+  }
+
+  /* Telugu headings/taglines use a proper Telugu typeface instead of
+     falling back to whatever generic font the visitor's OS provides. */
+  [lang="te"] {
+    font-family: "Noto Sans Telugu", var(--font-sans);
+    letter-spacing: 0;
   }
 
   :focus-visible {

@@ -30,6 +30,7 @@ function Recognition() {
       <PageHero
         eyebrow="Awards & recognition"
         title="Recognised for work done in the field"
+        titleTe="క్షేత్రస్థాయిలో చేసిన పనికి గుర్తింపు"
         lede="Recognition from state and national platforms for community development, sport and youth engagement."
       />
 

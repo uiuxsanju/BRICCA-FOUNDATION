@@ -40,10 +40,12 @@ export function CtaLink({
 export function PageHero({
   eyebrow,
   title,
+  titleTe,
   lede,
 }: {
   eyebrow: string;
   title: string;
+  titleTe?: string;
   lede?: string;
 }) {
   return (
@@ -52,6 +54,14 @@ export function PageHero({
         <Reveal>
           <p className="eyebrow">{eyebrow}</p>
           <h1 className="display-lg mt-5 max-w-4xl text-on-dark">{title}</h1>
+          {titleTe && (
+            <p
+              lang="te"
+              className="mt-2 max-w-4xl font-display text-lg font-semibold text-accent lg:text-xl"
+            >
+              {titleTe}
+            </p>
+          )}
           {lede && <p className="lede mt-6 text-on-dark-muted">{lede}</p>}
         </Reveal>
       </div>
@@ -62,12 +72,14 @@ export function PageHero({
 export function SectionHead({
   eyebrow,
   title,
+  titleTe,
   lede,
   tone = "dark",
   className,
 }: {
   eyebrow: string;
   title: string;
+  titleTe?: string;
   lede?: string;
   tone?: "dark" | "light";
   className?: string;
@@ -80,6 +92,17 @@ export function SectionHead({
       >
         {title}
       </h2>
+      {titleTe && (
+        <p
+          lang="te"
+          className={cn(
+            "mt-1.5 font-display text-base font-semibold",
+            tone === "light" ? "text-accent" : "text-accent",
+          )}
+        >
+          {titleTe}
+        </p>
+      )}
       {lede && (
         <p className={cn("lede mt-5", tone === "light" && "text-on-dark-muted")}>{lede}</p>
       )}

@@ -54,6 +54,7 @@ function GetInvolved() {
       <PageHero
         eyebrow="Get involved"
         title="Three ways to stand with these communities"
+        titleTe="ఈ సమాజాలకు తోడుగా నిలవడానికి మూడు మార్గాలు"
         lede="Whether you give money, capability or time, it lands in the same place: programmes that families depend on."
       />
 

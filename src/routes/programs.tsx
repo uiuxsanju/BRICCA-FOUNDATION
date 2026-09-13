@@ -31,6 +31,7 @@ function Programs() {
       <PageHero
         eyebrow="Our focus areas"
         title="Nine programme areas, designed around local need"
+        titleTe="స్థానిక అవసరాలకు అనుగుణంగా రూపొందించిన తొమ్మిది కార్యక్రమాలు"
         lede="From classrooms to coastal villages, each programme has a defined objective and a defined group of beneficiaries."
       />
 
@@ -45,6 +46,7 @@ function Programs() {
           <SectionHead
             eyebrow="Programme portfolio"
             title="Objectives and beneficiaries at a glance"
+            titleTe="లక్ష్యాలు మరియు లబ్ధిదారులు ఒక్క చూపులో"
           />
 
           <div className="mt-12 hidden lg:block">
@@ -76,6 +78,9 @@ function Programs() {
                         {p.no}
                       </span>
                       {p.title}
+                      <span lang="te" className="mt-1 block text-xs font-semibold text-accent">
+                        {p.titleTe}
+                      </span>
                     </th>
                     <td className="py-6 pr-8 text-sm leading-relaxed text-muted-foreground">
                       {p.objective}
@@ -94,6 +99,9 @@ function Programs() {
               <Reveal as="li" key={p.slug} delay={i * 50} className="border border-border bg-card p-6">
                 <p className="text-xs font-bold tracking-[0.2em] text-accent">{p.no}</p>
                 <h3 className="mt-2 font-display text-lg font-bold text-primary">{p.title}</h3>
+                <p lang="te" className="mt-0.5 font-display text-sm font-semibold text-accent">
+                  {p.titleTe}
+                </p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.objective}</p>
                 <p className="mt-4 text-[0.68rem] font-bold tracking-[0.18em] text-muted-foreground">
                   BENEFICIARIES
@@ -127,6 +135,9 @@ function Programs() {
               <div>
                 <p className="eyebrow">{p.no} · Programme</p>
                 <h2 className="display-md mt-4 text-primary">{p.title}</h2>
+                <p lang="te" className="mt-1 font-display text-lg font-semibold text-accent">
+                  {p.titleTe}
+                </p>
                 <p className="mt-5 text-base leading-relaxed text-muted-foreground">
                   {p.objective}
                 </p>

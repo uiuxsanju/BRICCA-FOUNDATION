@@ -43,6 +43,9 @@ export function ProgramGrid({ limit }: { limit?: number }) {
                 <h3 className="mt-2 font-display text-xl font-bold text-on-dark lg:text-[1.4rem]">
                   {p.title}
                 </h3>
+                <p lang="te" className="mt-0.5 font-display text-sm font-semibold text-accent">
+                  {p.titleTe}
+                </p>
                 <p className="mt-2 max-w-xs text-sm leading-relaxed text-on-dark-muted">
                   {p.short}
                 </p>

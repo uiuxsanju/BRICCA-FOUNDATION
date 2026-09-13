@@ -30,6 +30,7 @@ function Future() {
       <PageHero
         eyebrow="Looking ahead"
         title="Future priorities"
+        titleTe="భవిష్యత్ ప్రాధాన్యతలు"
         lede="Our forward plan is deliberately narrow: strengthen what already works, and fund it sustainably."
       />
 

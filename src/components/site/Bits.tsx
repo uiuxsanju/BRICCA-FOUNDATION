@@ -42,11 +42,13 @@ export function PageHero({
   title,
   titleTe,
   lede,
+  ledeTe,
 }: {
   eyebrow: string;
   title: string;
   titleTe?: string;
   lede?: string;
+  ledeTe?: string;
 }) {
   return (
     <section className="bg-primary pt-[4.5rem] text-on-dark">
@@ -63,6 +65,11 @@ export function PageHero({
             </p>
           )}
           {lede && <p className="lede mt-6 text-on-dark-muted">{lede}</p>}
+          {ledeTe && (
+            <p lang="te" className="mt-3 max-w-2xl text-sm leading-relaxed text-on-dark-muted">
+              {ledeTe}
+            </p>
+          )}
         </Reveal>
       </div>
     </section>
@@ -74,6 +81,7 @@ export function SectionHead({
   title,
   titleTe,
   lede,
+  ledeTe,
   tone = "dark",
   className,
 }: {
@@ -81,6 +89,7 @@ export function SectionHead({
   title: string;
   titleTe?: string;
   lede?: string;
+  ledeTe?: string;
   tone?: "dark" | "light";
   className?: string;
 }) {
@@ -105,6 +114,17 @@ export function SectionHead({
       )}
       {lede && (
         <p className={cn("lede mt-5", tone === "light" && "text-on-dark-muted")}>{lede}</p>
+      )}
+      {ledeTe && (
+        <p
+          lang="te"
+          className={cn(
+            "mt-2 text-sm leading-relaxed",
+            tone === "light" ? "text-on-dark-muted" : "text-muted-foreground",
+          )}
+        >
+          {ledeTe}
+        </p>
       )}
     </Reveal>
   );

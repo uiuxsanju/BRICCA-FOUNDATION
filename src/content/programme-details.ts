@@ -30,9 +30,12 @@ export type ProgrammeDetail = {
   titleTe: string;
   short: string;
   overview: string;
+  overviewTe: string;
   whatWeDo: string[];
   whyItMatters: string;
+  whyItMattersTe: string;
   whoWeServe: string;
+  whoWeServeTe: string;
   keyActivities: string[];
   ourApproach: string[];
   gallery: string[];
@@ -48,6 +51,8 @@ export const programmeDetails: ProgrammeDetail[] = [
     short: "Building stronger foundations for learning.",
     overview:
       "BRICCA Foundation's education programme works alongside government schools and out-of-school children in rural and tribal parts of Andhra Pradesh, focusing on the basics that make everything else possible: regular attendance, reading and writing confidence, and comfort with numbers. The aim is simple — every child within reach of our team should have a real chance to learn at grade level, regardless of where they were born.",
+    overviewTe:
+      "BRICCA ఫౌండేషన్ విద్యా కార్యక్రమం ఆంధ్రప్రదేశ్‌లోని గ్రామీణ, గిరిజన ప్రాంతాల్లో ప్రభుత్వ పాఠశాలలతో మరియు బడి బయట ఉన్న పిల్లలతో కలిసి పనిచేస్తుంది, క్రమం తప్పకుండా హాజరు కావడం, చదవడం-రాయడంలో నమ్మకం, సంఖ్యలతో సౌకర్యం వంటి మౌలిక అంశాలపై దృష్టి పెడుతుంది. లక్ష్యం సులభం — మా బృందం చేరుకోగల ప్రతి బిడ్డకు, వారు ఎక్కడ పుట్టినా, తరగతి స్థాయిలో నేర్చుకునే నిజమైన అవకాశం ఉండాలి.",
     whatWeDo: [
       "Run after-school and remedial learning support for children who are falling behind in reading, writing or maths",
       "Provide basic learning material — notebooks, stationery and age-appropriate books — to students who would otherwise go without",
@@ -57,8 +62,12 @@ export const programmeDetails: ProgrammeDetail[] = [
     ],
     whyItMatters:
       "In many of the villages BRICCA works in, the nearest school is under-resourced, understaffed, or simply too far for younger children to reach reliably. A child who falls behind in early reading rarely catches up on their own — the gap tends to widen every year. Consistent, local support at the right age keeps children in school and gives them a fair shot at everything that follows: secondary education, skilled work, and the ability to make their own choices as adults.",
+    whyItMattersTe:
+      "BRICCA పనిచేసే చాలా గ్రామాల్లో, సమీప పాఠశాలకు వనరులు, సిబ్బంది సరిపోవు, లేదా చిన్న పిల్లలు నమ్మకంగా చేరుకోలేనంత దూరంలో ఉంటుంది. ప్రారంభ చదువులో వెనుకబడిన బిడ్డ తనంతట తానుగా అరుదుగానే catch up అవుతుంది — ఈ అంతరం ఏటా పెరుగుతూ ఉంటుంది. సరైన వయసులో స్థిరమైన, స్థానిక మద్దతు పిల్లలను బడిలో ఉంచుతుంది మరియు తర్వాత వచ్చే ప్రతిదానికీ సరైన అవకాశం ఇస్తుంది.",
     whoWeServe:
       "School-going children and out-of-school learners in the rural, tribal and coastal communities where BRICCA is active — with particular attention to first-generation learners, whose families have limited ability to support schoolwork at home.",
+    whoWeServeTe:
+      "BRICCA పనిచేసే గ్రామీణ, గిరిజన మరియు తీరప్రాంత సమాజాల్లోని బడికి వెళ్ళే పిల్లలు మరియు బడి బయట ఉన్న విద్యార్థులు — ముఖ్యంగా ఇంట్లో చదువులో సహాయం చేయలేని కుటుంబాలున్న మొదటి తరం విద్యార్థులపై ప్రత్యేక దృష్టి.",
     keyActivities: [
       "Daily or weekly remedial learning sessions grouped by age and reading level",
       "Distribution of notebooks, textbooks and basic school supplies at the start of the academic year",
@@ -83,6 +92,8 @@ export const programmeDetails: ProgrammeDetail[] = [
     short: "Skills that lead to dignified employment.",
     overview:
       "The Livelihood & Skills programme gives unemployed and underemployed youth practical, market-relevant training — from vocational trades to basic digital skills — designed to connect directly to real employment or self-employment opportunities, not just a certificate.",
+    overviewTe:
+      "జీవనోపాధి & నైపుణ్యాలు కార్యక్రమం నిరుద్యోగ మరియు తక్కువ ఉపాధి కలిగిన యువతకు ఆచరణాత్మక, మార్కెట్‌కు తగిన శిక్షణ ఇస్తుంది — vocational trades నుండి basic digital నైపుణ్యాల వరకు — ఇది కేవలం సర్టిఫికెట్ కాదు, నిజమైన ఉద్యోగం లేదా స్వయం ఉపాధి అవకాశాలకు నేరుగా అనుసంధానం చేయడానికి రూపొందించబడింది.",
     whatWeDo: [
       "Deliver vocational skill training in trades with local demand, such as tailoring and basic technical repair",
       "Run digital and computer literacy courses for young people entering the job market",
@@ -91,8 +102,12 @@ export const programmeDetails: ProgrammeDetail[] = [
     ],
     whyItMatters:
       "A large number of young people in the communities BRICCA serves finish school with no clear route into stable work. Without a recognised skill, they're often limited to irregular daily-wage labour. Practical, hands-on training — the kind that leads directly to a trade or a job — is one of the most direct ways to change a young person's economic trajectory, and that of their family.",
+    whyItMattersTe:
+      "BRICCA సేవలందించే సమాజాల్లో చాలామంది యువకులు స్థిరమైన పనికి స్పష్టమైన మార్గం లేకుండా చదువు ముగిస్తారు. గుర్తింపు పొందిన నైపుణ్యం లేకుండా, వారు తరచుగా అనియత రోజువారీ కూలీ పనికే పరిమితమవుతారు. ఆచరణాత్మక శిక్షణ — నేరుగా ఒక వృత్తి లేదా ఉద్యోగానికి దారితీసేది — ఒక యువకుడి మరియు అతని కుటుంబం ఆర్థిక భవిష్యత్తును మార్చే అత్యంత ప్రత్యక్ష మార్గాల్లో ఒకటి.",
     whoWeServe:
       "Unemployed and underemployed youth in BRICCA's operating areas, with particular focus on young people who left formal education early and have limited access to formal vocational institutes.",
+    whoWeServeTe:
+      "BRICCA పనిచేసే ప్రాంతాల్లోని నిరుద్యోగ మరియు తక్కువ ఉపాధి కలిగిన యువత, ముఖ్యంగా చదువు మధ్యలో మానేసి, అధికారిక వృత్తి శిక్షణ సంస్థలకు పరిమిత అందుబాటు ఉన్న యువతపై ప్రత్యేక దృష్టి.",
     keyActivities: [
       "Batch-based vocational training courses run over several weeks per trade",
       "Practical, hands-on instruction rather than classroom-only theory",
@@ -117,6 +132,8 @@ export const programmeDetails: ProgrammeDetail[] = [
     short: "Independence through enterprise and voice.",
     overview:
       "BRICCA's Women Empowerment programme supports women in rural and coastal communities to build financial independence and a stronger voice in decisions that affect their households and communities — through skills training, group formation, and support for small enterprise.",
+    overviewTe:
+      "BRICCA మహిళా సాధికారత కార్యక్రమం గ్రామీణ మరియు తీరప్రాంత సమాజాల్లోని మహిళలకు ఆర్థిక స్వాతంత్ర్యం మరియు వారి కుటుంబాలు, సమాజాలను ప్రభావితం చేసే నిర్ణయాల్లో బలమైన గొంతును నిర్మించుకోవడానికి తోడ్పడుతుంది — నైపుణ్య శిక్షణ, గ్రూపుల ఏర్పాటు, చిన్న వ్యాపారాలకు మద్దతు ద్వారా.",
     whatWeDo: [
       "Support the formation and strengthening of women's groups for savings, mutual support and collective decision-making",
       "Provide skills training — including tailoring and craft-based livelihoods — that women can turn into income",
@@ -125,8 +142,12 @@ export const programmeDetails: ProgrammeDetail[] = [
     ],
     whyItMatters:
       "Many women in the communities BRICCA works in have limited independent income and limited say in household financial decisions, even when they contribute significant unpaid labour. A woman with her own income and a support network of peers is better placed to make decisions for herself and her family, and often becomes a source of support and encouragement for other women around her.",
+    whyItMattersTe:
+      "BRICCA పనిచేసే సమాజాల్లో చాలామంది మహిళలు గణనీయమైన వేతనం లేని పనిచేసినా, స్వతంత్ర ఆదాయం మరియు ఇంటి ఆర్థిక నిర్ణయాల్లో పరిమిత మాట కలిగి ఉంటారు. సొంత ఆదాయం మరియు తోటి మహిళల మద్దతు నెట్‌వర్క్ ఉన్న మహిళ తనకు మరియు తన కుటుంబానికి నిర్ణయాలు తీసుకోవడానికి మెరుగైన స్థితిలో ఉంటుంది.",
     whoWeServe:
       "Women in rural and coastal communities across BRICCA's operating areas, including homemakers with no prior independent income and women already running small, informal enterprises who need support to grow them.",
+    whoWeServeTe:
+      "BRICCA పనిచేసే ప్రాంతాల్లోని గ్రామీణ, తీరప్రాంత మహిళలు — స్వతంత్ర ఆదాయం లేని గృహిణులు మరియు ఇప్పటికే చిన్న, అనియత వ్యాపారాలు నడుపుతూ వాటిని పెంచడానికి మద్దతు కావాల్సిన మహిళలతో సహా.",
     keyActivities: [
       "Formation and regular meetings of women's groups for savings and mutual support",
       "Skills and craft-based livelihood training suited to local demand",
@@ -150,6 +171,8 @@ export const programmeDetails: ProgrammeDetail[] = [
     short: "Access, training and equal opportunity.",
     overview:
       "BRICCA's Disability Inclusion programme works to make training, opportunity and everyday community life more accessible for persons with disabilities and their families, so that disability is not the reason someone is left out of education, work or community participation.",
+    overviewTe:
+      "BRICCA వికలాంగుల చేరిక కార్యక్రమం వికలాంగులు మరియు వారి కుటుంబాలకు శిక్షణ, అవకాశం మరియు రోజువారీ సమాజ జీవితాన్ని మరింత అందుబాటులోకి తీసుకురావడానికి పనిచేస్తుంది, తద్వారా వైకల్యం విద్య, పని లేదా సమాజ భాగస్వామ్యం నుండి ఎవరినీ దూరం చేసే కారణం కాకూడదు.",
     whatWeDo: [
       "Identify persons with disabilities in the community and understand what specifically stands in the way of their participation",
       "Provide or connect participants to inclusive skill-training suited to their abilities and interests",
@@ -158,8 +181,12 @@ export const programmeDetails: ProgrammeDetail[] = [
     ],
     whyItMatters:
       "Persons with disabilities in rural communities often face a double barrier: the disability itself, and a lack of accessible infrastructure, training or attitudes that would let them participate fully in education, work and community life. Small, practical changes — an accessible entry point, a tailored training approach, a family that's been engaged rather than left to manage alone — can open doors that would otherwise stay closed.",
+    whyItMattersTe:
+      "గ్రామీణ సమాజాల్లోని వికలాంగులు తరచుగా రెండు అడ్డంకులను ఎదుర్కొంటారు: వైకల్యం మరియు అందుబాటులో లేని మౌలిక సదుపాయాలు, శిక్షణ లేదా వైఖరులు. చిన్న, ఆచరణాత్మక మార్పులు — అందుబాటులో ఉండే ప్రవేశం, తగిన శిక్షణా విధానం, భాగస్వామిగా చేసిన కుటుంబం — మూసుకుపోయే తలుపులను తెరవగలవు.",
     whoWeServe:
       "Persons with disabilities and their families in the communities where BRICCA is active, across a range of ages and disability types.",
+    whoWeServeTe:
+      "BRICCA పనిచేసే సమాజాల్లోని వివిధ వయసుల, వైకల్య రకాలున్న వికలాంగులు మరియు వారి కుటుంబాలు.",
     keyActivities: [
       "Household-level identification and needs assessment for persons with disabilities",
       "Inclusive, ability-appropriate skill-training sessions",
@@ -183,6 +210,8 @@ export const programmeDetails: ProgrammeDetail[] = [
     short: "Community health, close to home.",
     overview:
       "BRICCA's Health programme brings basic health awareness, screening and vaccination support directly into underserved villages, so that distance and cost are less of a barrier to routine care that many communities would otherwise go without.",
+    overviewTe:
+      "BRICCA ఆరోగ్య కార్యక్రమం సరిగా సేవలందని గ్రామాలకు నేరుగా ప్రాథమిక ఆరోగ్య అవగాహన, స్క్రీనింగ్ మరియు వ్యాక్సినేషన్ మద్దతును తీసుకువెళుతుంది, తద్వారా దూరం మరియు ఖర్చు సాధారణ సంరక్షణకు అడ్డంకిగా తక్కువ అవుతాయి.",
     whatWeDo: [
       "Organise health awareness and screening camps in villages with limited access to healthcare facilities",
       "Support vaccination drives and routine immunisation efforts in coordination with local health systems",
@@ -191,8 +220,12 @@ export const programmeDetails: ProgrammeDetail[] = [
     ],
     whyItMatters:
       "Rural households often have to travel long distances for even basic medical attention, which means minor, preventable conditions can go unaddressed until they become serious. Bringing screening, awareness and vaccination support closer to home helps catch problems earlier and builds the kind of routine health habits that reduce risk over time.",
+    whyItMattersTe:
+      "గ్రామీణ కుటుంబాలు సాధారణ వైద్య సహాయం కోసం కూడా చాలా దూరం ప్రయాణించాల్సి వస్తుంది, దీనివల్ల చిన్న, నివారించదగిన సమస్యలు తీవ్రమయ్యేవరకు పట్టించుకోకుండా ఉండిపోతాయి. స్క్రీనింగ్, అవగాహన మరియు వ్యాక్సినేషన్ మద్దతును ఇంటికి దగ్గరగా తీసుకురావడం సమస్యలను ముందుగానే గుర్తించడానికి సహాయపడుతుంది.",
     whoWeServe:
       "Rural households and vulnerable groups — including children, pregnant women and the elderly — in the villages where BRICCA runs health activities.",
+    whoWeServeTe:
+      "BRICCA ఆరోగ్య కార్యకలాపాలు నిర్వహించే గ్రామాల్లోని గ్రామీణ కుటుంబాలు మరియు బలహీన వర్గాలు — పిల్లలు, గర్భిణీ స్త్రీలు మరియు వృద్ధులతో సహా.",
     keyActivities: [
       "Village-level health screening and awareness camps",
       "Coordination and on-ground support for vaccination camps",
@@ -216,6 +249,8 @@ export const programmeDetails: ProgrammeDetail[] = [
     short: "Rapid, dignified support in crisis.",
     overview:
       "BRICCA's Disaster Relief programme provides essential relief material and on-ground community support to families affected by emergencies and natural disasters, aiming to respond quickly while treating every family with dignity.",
+    overviewTe:
+      "BRICCA విపత్తు సహాయ కార్యక్రమం అత్యవసర పరిస్థితులు మరియు ప్రకృతి వైపరీత్యాల బారిన పడిన కుటుంబాలకు అవసరమైన సహాయ సామాగ్రి మరియు క్షేత్రస్థాయి సమాజ మద్దతును అందిస్తుంది, ప్రతి కుటుంబాన్ని గౌరవంగా చూస్తూ వేగంగా స్పందించడమే లక్ష్యం.",
     whatWeDo: [
       "Assess urgent needs in affected communities immediately after a disaster or emergency",
       "Distribute essential relief material such as food, water and basic supplies to affected families",
@@ -224,8 +259,12 @@ export const programmeDetails: ProgrammeDetail[] = [
     ],
     whyItMatters:
       "In the hours and days after a disaster, the gap between families who get help quickly and those who don't can make a real difference to how they recover. A fast, well-coordinated local response — one that treats affected people with dignity rather than as passive recipients — helps meet urgent needs without adding to the disruption families are already facing.",
+    whyItMattersTe:
+      "విపత్తు తర్వాత గంటలు, రోజుల్లో, త్వరగా సహాయం పొందే కుటుంబాలకు మరియు పొందని వాటికి మధ్య అంతరం వారి కోలుకోవడంపై నిజమైన ప్రభావం చూపుతుంది. వేగవంతమైన, చక్కగా సమన్వయం చేయబడిన స్థానిక స్పందన బాధితులను గౌరవంగా చూస్తుంది.",
     whoWeServe:
       "Disaster-affected families in the communities BRICCA operates in, prioritising those with the most urgent and immediate needs.",
+    whoWeServeTe:
+      "BRICCA పనిచేసే సమాజాల్లోని విపత్తు బాధిత కుటుంబాలు, అత్యంత తక్షణ అవసరాలున్న వారికి ప్రాధాన్యత.",
     keyActivities: [
       "Rapid needs assessment in the immediate aftermath of an emergency",
       "Distribution of food, water and essential relief supplies",
@@ -249,6 +288,8 @@ export const programmeDetails: ProgrammeDetail[] = [
     short: "Sustainable farming, stronger incomes.",
     overview:
       "BRICCA's Agriculture programme works with small and marginal farmers to promote sustainable farming practices and provide practical support, aiming to strengthen incomes without depending on approaches that aren't suited to the farmer's own land and resources.",
+    overviewTe:
+      "BRICCA వ్యవసాయ కార్యక్రమం చిన్న, సన్నకారు రైతులతో కలిసి స్థిరమైన వ్యవసాయ పద్ధతులను ప్రోత్సహిస్తుంది మరియు ఆచరణాత్మక మద్దతు అందిస్తుంది, రైతు సొంత భూమి మరియు వనరులకు సరిపోని పద్ధతులపై ఆధారపడకుండా ఆదాయాలను బలోపేతం చేయడం లక్ష్యం.",
     whatWeDo: [
       "Share sustainable and locally appropriate farming practices with small and marginal farmers",
       "Support farmers in adopting practices that can improve yield and reduce input costs over time",
@@ -257,8 +298,12 @@ export const programmeDetails: ProgrammeDetail[] = [
     ],
     whyItMatters:
       "Small and marginal farmers often work with limited land, limited capital and limited access to updated agricultural knowledge, which makes them especially vulnerable to a single bad season. Practical, sustainable practices suited to their own conditions — rather than one-size-fits-all advice — can make farming more resilient and more profitable over time.",
+    whyItMattersTe:
+      "చిన్న, సన్నకారు రైతులు తరచుగా పరిమిత భూమి, పరిమిత మూలధనం, తాజా వ్యవసాయ పరిజ్ఞానానికి పరిమిత అందుబాటుతో పనిచేస్తారు. వారి సొంత పరిస్థితులకు తగిన ఆచరణాత్మక, స్థిరమైన పద్ధతులు వ్యవసాయాన్ని కాలక్రమేణా మరింత స్థితిస్థాపకంగా, లాభదాయకంగా మార్చగలవు.",
     whoWeServe:
       "Small and marginal farmers in the rural communities where BRICCA is active.",
+    whoWeServeTe:
+      "BRICCA పనిచేసే గ్రామీణ సమాజాల్లోని చిన్న, సన్నకారు రైతులు.",
     keyActivities: [
       "Farmer training sessions on sustainable and locally relevant agricultural practices",
       "On-field demonstrations and hands-on guidance",
@@ -282,6 +327,8 @@ export const programmeDetails: ProgrammeDetail[] = [
     short: "Confidence, discipline and teamwork.",
     overview:
       "BRICCA's Sports programme uses organised sporting activity to help children and youth build confidence, discipline, fitness and teamwork — skills that carry over well beyond the field or the court.",
+    overviewTe:
+      "BRICCA క్రీడల కార్యక్రమం పిల్లలు మరియు యువత ఆత్మవిశ్వాసం, క్రమశిక్షణ, ఫిట్‌నెస్ మరియు జట్టుకృషిని పెంపొందించుకోవడానికి వ్యవస్థీకృత క్రీడా కార్యకలాపాలను ఉపయోగిస్తుంది — ఇవి మైదానం లేదా కోర్టు దాటి కూడా బాగా ఉపయోగపడే నైపుణ్యాలు.",
     whatWeDo: [
       "Organise regular sports sessions and activities for children and youth in the community",
       "Provide access to basic sporting equipment and safe spaces to play",
@@ -290,8 +337,12 @@ export const programmeDetails: ProgrammeDetail[] = [
     ],
     whyItMatters:
       "Many children in the communities BRICCA works with have limited access to organised sport, safe playing spaces or basic equipment. Beyond fitness, regular sport teaches discipline, teamwork and resilience — habits that support children well beyond childhood, and give them a positive, structured way to spend their time.",
+    whyItMattersTe:
+      "BRICCA పనిచేసే సమాజాల్లోని చాలామంది పిల్లలకు వ్యవస్థీకృత క్రీడలు, సురక్షిత ఆట స్థలాలు లేదా ప్రాథమిక సామగ్రికి పరిమిత అందుబాటు ఉంటుంది. క్రమం తప్పకుండా ఆడే క్రీడలు క్రమశిక్షణ, జట్టుకృషి, స్థితిస్థాపకతను నేర్పుతాయి.",
     whoWeServe:
       "Children and youth in the communities where BRICCA runs sports activities.",
+    whoWeServeTe:
+      "BRICCA క్రీడా కార్యకలాపాలు నిర్వహించే సమాజాల్లోని పిల్లలు మరియు యువత.",
     keyActivities: [
       "Regular, scheduled sports sessions for children and youth",
       "Basic equipment provision where it's the barrier to participation",
@@ -315,6 +366,8 @@ export const programmeDetails: ProgrammeDetail[] = [
     short: "Programmes shaped by local realities.",
     overview:
       "BRICCA's Tribal & Coastal Development programme delivers community development work specifically designed around the realities of tribal and coastal communities in Andhra Pradesh, rather than applying the same approach used elsewhere in the state.",
+    overviewTe:
+      "BRICCA గిరిజన & తీరప్రాంత అభివృద్ధి కార్యక్రమం ఆంధ్రప్రదేశ్‌లోని గిరిజన మరియు తీరప్రాంత సమాజాల వాస్తవ పరిస్థితుల చుట్టూ ప్రత్యేకంగా రూపొందించిన సమాజ అభివృద్ధి పనిని అందిస్తుంది, రాష్ట్రంలో మరెక్కడో వాడే అదే విధానాన్ని అన్వయించకుండా.",
     whatWeDo: [
       "Understand the specific needs, livelihoods and constraints of individual tribal and coastal communities before designing any activity",
       "Coordinate relevant education, livelihood and health support to reach these communities where mainstream services often don't",
@@ -323,8 +376,12 @@ export const programmeDetails: ProgrammeDetail[] = [
     ],
     whyItMatters:
       "Tribal and coastal communities often sit furthest from mainstream infrastructure and services, whether because of geography, language, or simply being harder to reach. A generic development approach designed for other parts of the state frequently misses what these communities actually need. Programmes shaped around the specific realities of a tribal or coastal community are far more likely to actually reach and help the people they're meant for.",
+    whyItMattersTe:
+      "గిరిజన మరియు తీరప్రాంత సమాజాలు, భౌగోళికత, భాష, లేదా చేరుకోవడం కష్టం కావడం వల్ల, ప్రధాన స్రవంతి మౌలిక సదుపాయాలు మరియు సేవలకు తరచుగా అత్యంత దూరంగా ఉంటాయి. ఈ సమాజాల నిర్దిష్ట వాస్తవాల చుట్టూ రూపొందించిన కార్యక్రమాలు వాటికి నిజంగా చేరుకుని సహాయపడే అవకాశం చాలా ఎక్కువ.",
     whoWeServe:
       "Tribal and coastal communities within BRICCA's operating areas in Andhra Pradesh.",
+    whoWeServeTe:
+      "ఆంధ్రప్రదేశ్‌లో BRICCA పనిచేసే ప్రాంతాల్లోని గిరిజన మరియు తీరప్రాంత సమాజాలు.",
     keyActivities: [
       "Community-level needs assessment specific to each tribal or coastal area",
       "Coordinated delivery of education, livelihood and health support suited to local realities",

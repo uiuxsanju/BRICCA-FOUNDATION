@@ -41,6 +41,9 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
             <p className="text-base leading-relaxed text-muted-foreground">
               {programme.overview}
             </p>
+            <p lang="te" className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              {programme.overviewTe}
+            </p>
           </Reveal>
         </div>
       </section>
@@ -81,12 +84,18 @@ export function ProgrammeDetailPage({ programme }: { programme: ProgrammeDetail 
             <p className="mt-4 rule-accent text-base leading-relaxed text-muted-foreground">
               {programme.whyItMatters}
             </p>
+            <p lang="te" className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              {programme.whyItMattersTe}
+            </p>
           </Reveal>
           <Reveal delay={80}>
             <p className="eyebrow">Who we serve</p>
             <p lang="te" className="mt-1 text-sm font-semibold text-accent">మేము ఎవరికి సేవ చేస్తాము</p>
             <p className="mt-4 rule-accent text-base leading-relaxed text-muted-foreground">
               {programme.whoWeServe}
+            </p>
+            <p lang="te" className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              {programme.whoWeServeTe}
             </p>
           </Reveal>
         </div>

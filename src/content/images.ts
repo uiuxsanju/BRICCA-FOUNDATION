@@ -1,73 +1,56 @@
 /**
- * Real stock photography (Pexels — free license, no attribution required)
- * replacing the previous AI-generated placeholder images.
+ * Official BRICCA Foundation photography, supplied directly by the
+ * organisation. These replace the earlier stock placeholder images.
  *
- * Each URL points directly at Pexels' image CDN. Swap any of these for the
- * organisation's own photography whenever it's available — just replace the
- * string value, nothing else needs to change.
+ * Each programme has one primary (card/hero) image. Where more than one
+ * official photo was supplied for a programme, the extras are listed in
+ * that programme's gallery array for use on its detail page.
  */
 
-const px = (id: number, w = 1600) =>
-  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+import heroCommunityImg from "@/assets/programmes/hero-community.jpg";
+import featureAboutImg from "@/assets/programmes/feature-about.jpg";
+import educationCardImg from "@/assets/programmes/education-card.jpg";
+import educationFullImg from "@/assets/programmes/education.jpg";
+import livelihoodImg from "@/assets/programmes/livelihood.jpg";
+import livelihood2Img from "@/assets/programmes/livelihood-2.jpg";
+import womenImg from "@/assets/programmes/women.jpg";
+import disabilityImg from "@/assets/programmes/disability.jpg";
+import healthImg from "@/assets/programmes/health.jpg";
+import reliefImg from "@/assets/programmes/relief.jpg";
+import agricultureImg from "@/assets/programmes/agriculture.jpg";
+import sportsImg from "@/assets/programmes/sports.jpg";
+import tribalCoastalImg from "@/assets/programmes/tribal-coastal.jpg";
+import gangavaramPortImg from "@/assets/programmes/gangavaram-port.jpg";
 
-export const heroCommunity = px(20853361, 1920);
-export const featureAbout = px(36739282, 1600);
-export const featureImpact = px(3079978, 1600);
+export const heroCommunity = heroCommunityImg;
+export const featureAbout = featureAboutImg;
+// No second official "impact" photo was supplied — the Gangavaram Port
+// CSR visual doubles here since it already depicts education, health and
+// livelihood outcomes together.
+export const featureImpact = gangavaramPortImg;
 
-export const programEducation = px(31447794, 1200);
-export const programLivelihood = px(28389703, 1200);
-export const programWomen = px(15675900, 1200);
-export const programDisability = px(7162989, 1200);
-export const programHealth = px(9951142, 1200);
-export const programRelief = px(6647008, 1200);
-export const programAgriculture = px(29912210, 1200);
-export const programSports = px(13509977, 1200);
-export const programCoastal = px(31790339, 1200);
+// Card/hero images. Education uses a crop of the official banner with its
+// baked-in title cropped out, so it doesn't duplicate the site's own card
+// heading — the full banner (with title) appears in the programme gallery.
+export const programEducation = educationCardImg;
+export const programLivelihood = livelihoodImg;
+export const programWomen = womenImg;
+export const programDisability = disabilityImg;
+export const programHealth = healthImg;
+export const programRelief = reliefImg;
+export const programAgriculture = agricultureImg;
+export const programSports = sportsImg;
+export const programCoastal = tribalCoastalImg;
 
-// Extra gallery images for the three detailed programme pages
-// (/programmes/education, /programmes/livelihood-skills, /programmes/women-empowerment)
-export const educationGallery = [
-  programEducation,
-  px(12199101, 1200),
-  px(15119089, 1200),
-  px(35558791, 1200),
-];
+export const gangavaramPort = gangavaramPortImg;
 
-export const livelihoodGallery = [
-  programLivelihood,
-  px(35216547, 1200),
-  px(3869086, 1200),
-];
-
-export const womenGallery = [
-  programWomen,
-  px(36746074, 1200),
-  px(36384099, 1200),
-];
-
-export const disabilityGallery = [
-  programDisability,
-  px(6194680, 1200),
-  px(8415827, 1200),
-  px(8127701, 1200),
-];
-
-export const healthGallery = [
-  programHealth,
-  px(33127835, 1200),
-  px(33127869, 1200),
-  px(33034061, 1200),
-];
-
-export const reliefGallery = [programRelief, px(6591161, 1200), px(6995260, 1200)];
-
-export const agricultureGallery = [
-  programAgriculture,
-  px(20238488, 1200),
-  px(20344368, 1200),
-  px(20515274, 1200),
-];
-
-export const sportsGallery = [programSports, px(2549230, 1200), px(30969813, 1200)];
-
-export const coastalGallery = [programCoastal, px(12865872, 1200)];
+// Galleries for the 9 detailed programme pages — official photos only.
+export const educationGallery = [educationFullImg];
+export const livelihoodGallery = [livelihoodImg, livelihood2Img];
+export const womenGallery = [womenImg];
+export const disabilityGallery = [disabilityImg];
+export const healthGallery = [healthImg];
+export const reliefGallery = [reliefImg];
+export const agricultureGallery = [agricultureImg];
+export const sportsGallery = [sportsImg];
+export const coastalGallery = [tribalCoastalImg];

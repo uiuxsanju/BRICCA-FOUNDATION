@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
 import { featureAbout } from "@/content/images";
-import { PageHero, PlaceholderNote } from "@/components/site/Bits";
+import { PageHero } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import { contact, org } from "@/content/bricca";
 
@@ -53,13 +53,15 @@ function Contact() {
             </Reveal>
             <dl className="mt-10 grid gap-6">
               <ContactRow icon={MapPin} label="Registered office" value={contact.address} />
-              <ContactRow icon={Phone} label="Phone" value={contact.phone} />
-              <ContactRow icon={Mail} label="Email" value={contact.email} />
+              {contact.phone && <ContactRow icon={Phone} label="Phone" value={contact.phone} />}
+              {contact.email && <ContactRow icon={Mail} label="Email" value={contact.email} />}
             </dl>
-            <PlaceholderNote>
-              Address, phone and email are PLACEHOLDER values — the source document did not include
-              them, and nothing has been invented. Send the real details to have them filled in.
-            </PlaceholderNote>
+            {(!contact.phone || !contact.email) && (
+              <p className="mt-6 text-sm text-muted-foreground">
+                A direct phone number and email will be added here once confirmed — for now,
+                please use the form to reach us.
+              </p>
+            )}
           </div>
 
           <Reveal delay={100} className="border border-border bg-card p-8 lg:p-10">

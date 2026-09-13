@@ -16,6 +16,8 @@ import {
   programAgriculture as agriculture,
   programSports as sports,
   programCoastal as coastal,
+  gangavaramPort,
+  heroCommunity,
 } from "@/content/images";
 
 export const org = {
@@ -158,20 +160,23 @@ export const projects = [
   {
     donor: "TRRAIN",
     project: "Skilling and inclusion programme",
-    year: "Fiscal year — PLACEHOLDER",
-    amount: "Amount — PLACEHOLDER",
+    year: "Fiscal year — pending confirmation",
+    amount: "Project value — pending confirmation",
+    image: livelihood,
   },
   {
     donor: "World Bank",
     project: "World Bank-supported community initiative",
-    year: "Fiscal year — PLACEHOLDER",
-    amount: "Amount — PLACEHOLDER",
+    year: "Fiscal year — pending confirmation",
+    amount: "Project value — pending confirmation",
+    image: heroCommunity,
   },
   {
     donor: "Gangavaram Port",
     project: "CSR community development project",
-    year: "Fiscal year — PLACEHOLDER",
-    amount: "Amount — PLACEHOLDER",
+    year: "Fiscal year — pending confirmation",
+    amount: "Project value — pending confirmation",
+    image: gangavaramPort,
   },
 ];
 
@@ -183,12 +188,24 @@ export const awards = [
 ];
 
 export const compliance = [
-  { title: "Society Registration", detail: "Registration no. — PLACEHOLDER", status: "Registered" },
-  { title: "PAN", detail: "PAN — PLACEHOLDER", status: "Active" },
-  { title: "12A", detail: "Registration no. — PLACEHOLDER", status: "Registered" },
-  { title: "80G", detail: "Registration no. — PLACEHOLDER", status: "Registered" },
-  { title: "CSR-1", detail: "Registration no. — PLACEHOLDER", status: "Registered" },
-  { title: "NGO Darpan", detail: "Unique ID — PLACEHOLDER", status: "Registered" },
+  {
+    title: "Society Registration",
+    detail: "Registered as a charitable society/association",
+    status: "Registered",
+  },
+  { title: "PAN", detail: "AAOAB6452A", status: "Active" },
+  {
+    title: "12A",
+    detail: "Unique Registration No. AAOAB6452AE20251 — valid AY 2026-27 to AY 2028-29",
+    status: "Registered",
+  },
+  {
+    title: "80G",
+    detail: "Unique Registration No. AAOAB6452AF20251 — valid AY 2026-27 to AY 2028-29",
+    status: "Registered",
+  },
+  { title: "CSR-1", detail: "Registration number pending confirmation", status: "Registered" },
+  { title: "NGO Darpan", detail: "Unique ID pending confirmation", status: "Registered" },
   { title: "FCRA", detail: "Application submitted", status: "Under Process — Pending Approval" },
 ];
 
@@ -226,14 +243,32 @@ export const roadmap = [
 ];
 
 export const contact = {
-  address: "Andhra Pradesh, India — full registered address: PLACEHOLDER",
-  phone: "Phone: PLACEHOLDER",
-  email: "Email: PLACEHOLDER",
-  bank: [
-    { label: "Account name", value: "PLACEHOLDER" },
-    { label: "Bank & branch", value: "PLACEHOLDER" },
-    { label: "Account number", value: "PLACEHOLDER" },
-    { label: "IFSC code", value: "PLACEHOLDER" },
+  legalName: "Bring Change and Compassion in Association",
+  address:
+    "1-265, Tharuva Village, Kaligotla B.O, Visakhapatnam, Andhra Pradesh, India - 531075",
+  // No phone number or email address was included in any document supplied —
+  // add the real ones here once available; the contact page routes enquiries
+  // through its form in the meantime.
+  phone: null,
+  email: null,
+  bankAccounts: [
+    {
+      bank: "State Bank of India (SBI)",
+      accountName: "Bring Change and Compassion in Association",
+      accountNumber: "40414561481",
+      ifsc: "SBIN0002716",
+      micr: "530002009",
+      // Branch address was not supplied — add it once confirmed.
+      branch: null,
+    },
+    {
+      bank: "HDFC Bank",
+      accountName: "Bring Change and Compassion in Association",
+      accountNumber: "50100589093302",
+      ifsc: "HDFC0006308",
+      micr: "530240022",
+      branch: null,
+    },
   ],
 };
 

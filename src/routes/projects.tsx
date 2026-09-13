@@ -1,11 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { programLivelihood, programCoastal, programWomen } from "@/content/images";
-import { CtaLink, PageHero, PlaceholderNote } from "@/components/site/Bits";
+import { CtaLink, PageHero } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import { projects } from "@/content/bricca";
-
-const images = [programLivelihood, programCoastal, programWomen];
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -46,7 +43,7 @@ function Projects() {
               className="grid gap-8 border-t border-border pt-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14"
             >
               <img
-                src={images[i % images.length]}
+                src={p.image}
                 alt={`${p.donor} supported project activity`}
                 width={800}
                 height={1000}
@@ -80,12 +77,12 @@ function Projects() {
           ))}
         </ul>
 
-        <PlaceholderNote>
-          Fiscal years and project amounts are marked PLACEHOLDER because they were not included in
-          the source document. Send the figures and they will replace these fields exactly.
-        </PlaceholderNote>
+        <p className="mt-12 text-sm text-muted-foreground">
+          Exact fiscal years and project values are being confirmed with each partner and will be
+          added once documented.
+        </p>
 
-        <div className="mt-12">
+        <div className="mt-6">
           <CtaLink to="/partners" variant="outline">
             OUR PARTNERS
           </CtaLink>

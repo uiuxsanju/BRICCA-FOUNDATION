@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Landmark, QrCode, ShieldCheck } from "lucide-react";
 
-import { CtaLink, PlaceholderNote } from "@/components/site/Bits";
+import { CtaLink } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
 import { contact } from "@/content/bricca";
 
@@ -54,49 +54,76 @@ function Donate() {
       </section>
 
       <section className="container-page py-20 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
-          <Reveal className="border border-border bg-card p-8 lg:p-10">
+        <div className="grid gap-4">
+          <Reveal>
             <Landmark className="size-7 text-primary" aria-hidden="true" />
             <h2 className="display-md mt-6 text-primary">Bank transfer details</h2>
-            <p className="mt-3 text-sm text-muted-foreground">
-              For direct bank transfers and CSR disbursements.
+            <p className="mt-3 max-w-xl text-sm text-muted-foreground">
+              For direct bank transfers and CSR disbursements. Both accounts are held in the
+              name of BRICCA Foundation's registered legal entity.
             </p>
-            <dl className="mt-8 grid gap-5">
-              {contact.bank.map((b) => (
-                <div
-                  key={b.label}
-                  className="grid gap-1 border-b border-border pb-5 sm:grid-cols-[12rem_1fr] sm:gap-6"
-                >
-                  <dt className="text-[0.68rem] font-bold tracking-[0.18em] text-muted-foreground">
-                    {b.label.toUpperCase()}
-                  </dt>
-                  <dd className="font-display text-base font-semibold text-foreground">
-                    {b.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-            <PlaceholderNote>
-              Bank details were not in the source document. Send them and they will replace these
-              PLACEHOLDER fields exactly as provided.
-            </PlaceholderNote>
           </Reveal>
+        </div>
 
-          <Reveal delay={120} className="border border-dashed border-border-strong bg-surface p-8">
+        <div className="mt-10 grid gap-px bg-border sm:grid-cols-2">
+          {contact.bankAccounts.map((b, i) => (
+            <Reveal as="div" key={b.bank} delay={i * 90} className="bg-card p-8 lg:p-10">
+              <h3 className="font-display text-lg font-bold text-primary">{b.bank}</h3>
+              <dl className="mt-6 grid gap-4">
+                <BankRow label="Account name" value={b.accountName} />
+                <BankRow label="Account number" value={b.accountNumber} mono />
+                <BankRow label="IFSC code" value={b.ifsc} mono />
+                <BankRow label="MICR code" value={b.micr} mono />
+                {b.branch ? (
+                  <BankRow label="Branch address" value={b.branch} />
+                ) : (
+                  <BankRow label="Branch address" value="To be confirmed" muted />
+                )}
+              </dl>
+            </Reveal>
+          ))}
+        </div>
+
+        <div className="mt-14 grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <Reveal className="border border-dashed border-border-strong bg-surface p-8">
             <QrCode className="size-7 text-border-strong" aria-hidden="true" />
-            <h2 className="mt-6 font-display text-xl font-bold text-primary">
-              UPI / QR code placeholder
-            </h2>
+            <h2 className="mt-6 font-display text-xl font-bold text-primary">Scan to pay</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              No UPI ID or QR code was supplied, so none has been invented. This panel is reserved
-              for your official payment QR image and UPI handle.
+              A UPI QR code will be published here as soon as BRICCA Foundation's official
+              payment QR is confirmed. Until then, please use the bank transfer details above.
             </p>
-            <div className="mt-8 grid aspect-square w-full max-w-56 place-items-center border border-dashed border-border-strong bg-card text-xs text-muted-foreground">
-              QR IMAGE HERE
-            </div>
           </Reveal>
         </div>
       </section>
     </>
+  );
+}
+
+function BankRow({
+  label,
+  value,
+  mono,
+  muted,
+}: {
+  label: string;
+  value: string;
+  mono?: boolean;
+  muted?: boolean;
+}) {
+  return (
+    <div className="grid gap-1 border-b border-border pb-4">
+      <dt className="text-[0.65rem] font-bold tracking-[0.18em] text-muted-foreground">
+        {label.toUpperCase()}
+      </dt>
+      <dd
+        className={
+          muted
+            ? "text-sm text-muted-foreground"
+            : `text-base font-semibold text-foreground ${mono ? "font-mono tracking-wide" : "font-display"}`
+        }
+      >
+        {value}
+      </dd>
+    </div>
   );
 }

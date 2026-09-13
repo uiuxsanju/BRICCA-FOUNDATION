@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BadgeCheck, Clock3, FileCheck2 } from "lucide-react";
 
-import { CtaLink, PageHero, PlaceholderNote, SectionHead } from "@/components/site/Bits";
+import { CtaLink, PageHero, SectionHead } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
-import { compliance } from "@/content/bricca";
+import { compliance, contact } from "@/content/bricca";
 
 export const Route = createFileRoute("/compliance")({
   head: () => ({
@@ -31,7 +31,7 @@ function Compliance() {
       <PageHero
         eyebrow="Trust & compliance"
         title="Transparent. Accountable. Compliant."
-        lede="Every registration below is held by BRICCA Foundation. Where an approval is still in process, we say so plainly."
+        lede={`Every registration below is held by BRICCA Foundation's registered legal entity, ${contact.legalName}, at ${contact.address}.`}
       />
 
       <section className="container-page py-20 lg:py-28">
@@ -61,10 +61,12 @@ function Compliance() {
           })}
         </ul>
 
-        <PlaceholderNote>
-          Registration numbers are marked PLACEHOLDER because they were not in the source document.
+        <p className="mt-10 max-w-2xl text-sm text-muted-foreground">
+          PAN, 12A and 80G registration numbers above are sourced directly from BRICCA
+          Foundation's official Income Tax Department registration orders. Society Registration,
+          CSR-1 and NGO Darpan numbers are pending confirmation and will be added once available.
           FCRA is shown, correctly, as under process and pending approval.
-        </PlaceholderNote>
+        </p>
       </section>
 
       <section className="bg-primary py-20 text-on-dark lg:py-28">
